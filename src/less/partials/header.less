@@ -1,0 +1,76 @@
+
+@header-height: 170px;
+header {
+	height: @header-height;
+	background: #36312e;
+	position: relative;
+	.logo {
+		position: relative;
+		z-index: 100;
+	}
+	ul {
+		list-style:none;
+		.vertical-align;
+	}
+	.header-nav {
+		height: @header-height;
+		li {
+			display: inline-block;
+			position: relative;
+			bottom: 0;
+		}
+		a {
+			display: inline-block;
+			background: #444;
+			color: #ddd;
+			padding: 6px 8px;
+			margin: 2px;
+			font-size: 14px;
+			text-decoration: none;
+			white-space: pre;
+			@media only screen and (max-width : 1024px) {
+				font-size: 13px;
+				padding: 5px 7px;
+			}
+			@media only screen and (max-width : 768px) {
+				font-size: 12px;
+				padding: 4px 6px;
+			}
+			@media only screen and (max-width : 480px) {
+				font-size: 11px;
+				padding: 3px 5px;
+			}
+			&:hover {
+				background: #555;
+				color: #fafafa;
+			}
+		}
+	}
+	.address {
+		font-size: 17px;
+		color:#fafafa;
+		text-align: right;
+		height: @header-height;
+		li {
+			white-space: pre;
+		}
+		@media only screen and (max-width : 1024px) {
+			font-size: 16px;
+		}
+		@media only screen and (max-width : 768px) {
+			font-size: 15px;
+		}
+		@media only screen and (max-width : 480px) {
+			font-size: 14px;
+		}
+	}
+	&:after {
+		background: url(../images/stripes.jpg);
+		content: '';
+		height: 5px;
+		position:absolute;
+		bottom:0;
+		left: 0;
+		right: 0;
+	}
+}
