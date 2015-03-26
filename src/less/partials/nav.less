@@ -74,6 +74,7 @@ nav {
 				border: 1px solid #e7e7e7;
 				-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+				width: auto;
 				@media screen and (max-width: 1024px) {
 					display: block;
 					position: relative;
@@ -98,25 +99,23 @@ nav {
 		margin: 0 auto;
 		top: 0;
 		right: 0;
-		position: absolute;
+		position: relative;
 		display: none;
 		color:#fafafa;
 		z-index:2;
 		transition: all 0.5s ease;
 		cursor: pointer;
+		width: 40px;
 		@media screen and (max-width: 1024px) {
-			position: absolute; 
 			right: 0;
 			display: block;
 		}
 		span {
-			width: 38px;
 			height: 5px;
 			background: #ccc;
 			padding: 0;
 			display: block;
-			line-height: 6px;
-			margin: 7px 10px;
+			margin: 7px 0;
 		}
 	}
 

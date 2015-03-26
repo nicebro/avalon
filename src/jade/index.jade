@@ -1,9 +1,79 @@
 extends ./layouts/default.jade
 
 block title
-	title Index Page Title
+	title Main Page
 
 block content
-	
-
-block scripts
+	.container-fluid
+		.row
+			.col-md-9
+				.products-grid
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/vizitki.jpg")
+						.caption Визитки
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/blanki.jpg")
+						.caption Фирменные бланки
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/konverty.jpg")
+						.caption Фирменные конверты
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/papki.jpg")
+						.caption Папки
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/knigi.jpg")
+						.caption Книги, брошюры
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/flaera-listovki.jpg")
+						.caption Буклеты, флаера, листовки
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/vobleru.jpg")
+						.caption Воблерры
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/magnitu.jpg")
+						.caption Магниты
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/plakaty.jpg")
+						.caption Плакаты
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/nakleyki.jpg")
+						.caption Наклейки
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/kalendari.jpg")
+						.caption Календари
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/holstu.jpg")
+						.caption Холсты
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/banery.jpg")
+						.caption Баннеры
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/menu.jpg")
+						.caption Меню
+					.col-xs-6.col-sm-4.col-md-15: a(href="#")
+						img(class="img-responsive" src="./assets/images/products-grid/diskont.jpg")
+						.caption Дисконтные, скрейтч карточки
+					.clearfix
+			.col-md-3
+				.news
+					.post
+						.post-header 
+							|Наши новости
+							.date  19.05.2014 15:33
+						.post-content
+							|Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+							|Similique, ratione reprehenderit libero voluptate repellendus aliquam laudantium perspiciatis qui. 
+							|Veritatis, commodi! Aspernatur, error consequuntur repellendus voluptatibus dolores voluptatem iure rem numquam!
+							|[...]
+						.date
+						a(href="#").read-more Читать полностью
+					.post
+						.post-header 
+							|Lorem ipsum
+							.date 19.05.2014 15:33
+						.post-content
+							|Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+							|Similique, ratione reprehenderit libero voluptate repellendus aliquam laudantium perspiciatis qui. 
+							|Veritatis, commodi! Aspernatur, error consequuntur repellendus voluptatibus dolores voluptatem iure rem numquam!
+							|[...]
+						a(href="#").read-more Читать полностью

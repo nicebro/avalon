@@ -16,40 +16,25 @@ html(lang="en")
 		block styles
 	body
 		.wrapper
-			//header start
-			include ../includes/header.jade
-			//header end
-			//nav start
-			include ../includes/nav.jade
-			//nav end
-			//content start
-			block content
-			//content end
+		//header start
+		include ../includes/header.jade
+		//header end
+		//nav start
+		include ../includes/nav.jade
+		//nav end
+		//content start
+		block content
+		//content end
+		//footer start
+		include ../includes/footer.jade
+		//footer end
+
 		//scripts start
 		script(src='/assets/js/jquery.js')
 		script(src='/assets/js/bootstrap.min.js')
 		block scripts
 		script.
-			$(function() {
-				//- var mq = window.matchMedia("screen and (max-width: 960px)");
-				//- if(mq.matches) {
-				//- 	$('.nav-inner > ul > li').toggle(function(e) {
-				//- 		$(this).find('ul').addClass('open');
-				//- 	},
-				//- 	function(e) {
-				//- 		$(this).find('ul').removeClass('open');
-				//- 	});
-				//- } else {
-				//- 	$('.nav-inner > ul > li').hover(function() {	
-				//- 		$(this).find('ul').addClass('open');
-				//- 	},
-				//- 	function(e) {
-				//- 		$(this).find('ul').removeClass('open');
-				//- 	});
-				//- }
-
+			$('.mobile-button').click(function() {
+				$('.nav-inner').toggleClass('open');
 			});
-				$('.mobile-button').click(function() {
-					$('.nav-inner').toggleClass('open');
-				});
 		//scripts end
