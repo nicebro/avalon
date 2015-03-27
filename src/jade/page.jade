@@ -3,8 +3,13 @@ extends ./layouts/default.jade
 block styles
 
 block scripts
+	link(href="/assets/css/photoswipe/photoswipe.css" rel="stylesheet" type="text/css")
+	link(href="/assets/css/photoswipe/default-skin.css" rel="stylesheet" type="text/css")
 	script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.2.2/masonry.pkgd.min.js")
 	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
+	script(src="/assets/js/photoswipe/photoswipe.min.js")
+	script(src="/assets/js/photoswipe/photoswipe-ui-default.min.js")
 	script.
 		var $container = $('.gallery-images');
 		// initialize
@@ -27,47 +32,44 @@ block content
 			.row
 				.col-md-8
 					.content
-						h2 Визитки
-						p
-							|Каждый вид печати имеет свои плюсы и минусы. Мы постараемся дать краткое описание каждого вида печати. Конечно, в текстовом описании всего не расскажешь, лучше всего подъехать к нам в офис и все посмотреть и "пощупать" вживую, но для первичного дистанционного ознакомления этого достаточно.
-						p
-							|Мы можем предложить Вам изготовление визитных карточек различными видами печати - цифровой лазерной (с ламинацией и без), объемным шелкотрафаретом, тиснением фольгой.
-
-							.embed-responsive.embed-responsive-16by9
-								iframe.embed-responsive-item(src="https://www.youtube.com/embed/NTCLob_-Eak?theme=light" frameborder="0" allowfullscreen)
-						p
-							| Плюсы и минусы лазерной печати:
-						p
-							| Плюсы:
-							ul
+						.col-lg-6.col-md-12
+							h2 Визитки
+							p Каждый вид печати имеет свои плюсы и минусы. Мы постараемся дать краткое описание каждого вида печати. Конечно, в текстовом описании всего не расскажешь, лучше всего подъехать к нам в офис и все посмотреть и "пощупать" вживую, но для первичного дистанционного ознакомления этого достаточно.
+							p Мы можем предложить Вам изготовление визитных карточек различными видами печати - цифровой лазерной (с ламинацией и без), объемным шелкотрафаретом, тиснением фольгой.
+							p Плюсы и минусы лазерной печати:
+							p: b Плюсы:
+							ul.plus
 								li короткий срок изготовления (от 1 часа)
 								li сравнительно невысокая цена
 								li цена не зависит от количества цветов
 								li цена не зависит от заполнения цветом - любые плашки, фото - в общем, никаких ограничений по макету
 								li не боится воды, ультрафиолета и царапин
 								li допускает ламинацию
-								li печатает на ЛЮБЫХ светлых дизайнерских картонах до 420 г/м (НОВИНКА!!!! Новая цифровая печатная машина - анонс на главной странице сайта!)
-						p
-							| Минусы:
-							ul
+								li печатает на ЛЮБЫХ светлых дизайнерских картонах до 420 г/м НОВИНКА!!!! Новая цифровая печатная машина - анонс на главной странице сайта!
+							p: b Минусы:
+							ul.minus
 								li невозможно печатать по темным дизайнерским картонам и пластикам.
-					h2 Образцы работ
-					.gallery-images
-						.grid-sizer
-						.gutter-sizer
-						.item: img.img-responsive(src="https://placekitten.com/250/315")
-						.item.w2: img.img-responsive(src="https://placekitten.com/500/387")
-						.item: img.img-responsive(src="https://placekitten.com/250/365")
-						.item: img.img-responsive(src="https://placekitten.com/250/512")
-						.item: img.img-responsive(src="https://placekitten.com/250/515")
-						.item: img.img-responsive(src="https://placekitten.com/250/315")
-						.item: img.img-responsive(src="https://placekitten.com/250/315")
-						.item: img.img-responsive(src="https://placekitten.com/250/315")
-						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						.col-lg-6.col-md-12
+							.page-video
+								.embed-responsive.embed-responsive-16by9
+									iframe.embed-responsive-item(src="https://www.youtube.com/embed/DsC_Q9Htue4?theme=light" frameborder="0" allowfullscreen)
+								h4 Тиснение фольгиратором
+						.col-md-12			
+							h2 Примеры работ
+							.gallery-images
+								.grid-sizer
+								.gutter-sizer
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind1.jpg")
+								.item.w2: img.img-responsive(src="/assets/images/buisness-cards/Bind2.jpg")
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind3.jpg")
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind4.jpg")
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind5.jpg")
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind6.jpg")
+								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind7.jpg")
 						
 				.col-md-4
 					.calculator
-						h2 Расчет стоимости
+						h2 Калькулятор
 						.row
 							.col-md-6
 								.form-group
@@ -107,7 +109,6 @@ block content
 											option Контурная вырезка
 							.col-md-12
 								.form-group
-									h2
-											| Стоимость 250 &#8372;
+									h2 Стоимость 250 &#8372;
 
 
