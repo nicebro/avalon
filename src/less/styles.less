@@ -1,3 +1,15 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: auto;
+  }
+}
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -53,3 +65,4 @@
 @import "partials/products-grid.less";
 @import "partials/news.less";
 @import "partials/footer.less";
+@import "partials/main.less";

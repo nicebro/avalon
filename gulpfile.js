@@ -46,25 +46,39 @@ gulp.task('css', function() {
 	.pipe(gulp.dest(paths.assets.css))
 	.pipe(browserSync.reload({stream:true}));	
 
+	// gulp.src([
+	// 	paths.assets.vendor + 'bootstrap/dist/css/bootstrap.min.css',
+	// ])
+	// .pipe(gulp.dest(paths.assets.css));
+
 	gulp.src([
-		paths.assets.vendor + 'bootstrap/dist/css/bootstrap.min.css',
+		paths.assets.vendor + 'photoswipe/dist/photoswipe.css',
+		paths.assets.vendor + 'photoswipe/dist/default-skin/default-skin.css',
 	])
-	.pipe(gulp.dest(paths.assets.css));
+	.pipe(gulp.dest(paths.assets.css + 'photoswipe/'));
 });
 
 gulp.task('js', function() {  
-	return gulp.src([
+	gulp.src([
 		paths.assets.vendor + 'jquery/dist/jquery.js',
 		paths.assets.vendor + 'bootstrap/dist/js/bootstrap.min.js',
 		paths.assets.vendor + 'sequence/scripts/jquery.sequence.js',
+		paths.assets.vendor + 'photoswipe/dist/photoswipe.min.js',
+		paths.assets.vendor + 'photoswipe/dist/photoswipe-ui-default.min.js',
 		paths.src.js + 'scripts.js'
 	])
 	//.pipe(concat('scripts.js'))
 	.pipe(gulp.dest(paths.assets.js))
 	//.pipe(uglify()).on('error', catchError)
 	//.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest(paths.assets.js))
 	.pipe(browserSync.reload({stream:true}));
+
+	gulp.src([
+		paths.assets.vendor + 'photoswipe/dist/photoswipe.min.js',
+		paths.assets.vendor + 'photoswipe/dist/photoswipe-ui-default.min.js',
+	])
+	.pipe(gulp.dest(paths.assets.js + 'photoswipe/'))
+
 });
 
 gulp.task('jade', function() {
@@ -72,11 +86,12 @@ gulp.task('jade', function() {
 	.pipe(jade({
 		pretty: true
 	})).on('error', catchError)
-	.pipe(gulp.dest('./public/'));
+	.pipe(gulp.dest('./public/'))
+	.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('watch', ['browser-sync', 'css', 'js', 'jade'], function() {  
-	gulp.watch(paths.src.less + '**/*.less', ['css', browserSync.reload]);
-	gulp.watch(paths.src.js + '*.js', ['js', browserSync.reload]);
-	gulp.watch(paths.src.jade + '**/*.jade', ['jade', browserSync.reload]);
+	gulp.watch(paths.src.less + '**/*.less', ['css']);
+	gulp.watch(paths.src.js + '*.js', ['js']);
+	gulp.watch(paths.src.jade + '**/*.jade', ['jade']);
 });

@@ -3,6 +3,8 @@
   "dependencies": {
     "sequence": "https://github.com/IanLunn/Sequence.git#master",
     "jquery": "~1",
-    "bootstrap": "~3"
+    "bootstrap": "~3",
+    "photoswipe": "~4.0.7",
+    "masonry": "~3.2.2"
   }
 }

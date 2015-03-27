@@ -1,3 +1,16 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin-bottom: auto;
+  }
+}
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -320,7 +333,9 @@ nav .caret {
 .news .read-more {
   padding-top: 10px;
 }
-.footer {
+footer {
+  position: absolute;
+  bottom: 0;
   background: #36312e;
   width: 100%;
   min-height: 100px;
@@ -328,28 +343,73 @@ nav .caret {
   padding: 20px 0 20px;
   text-align: left;
 }
-.footer h1 {
+footer h1 {
   color: #ccc;
   font-size: 21px;
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
-.footer .middle-col {
+footer .middle-col {
   text-align: center;
 }
-.footer .middle-col h1 {
+footer .middle-col h1 {
   text-align: center;
 }
-.footer .right-col {
+footer .right-col {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  .footer .left-col,
-  .footer .middle-col,
-  .footer .right-col {
+  footer {
+    position: relative;
+  }
+  footer .left-col,
+  footer .middle-col,
+  footer .right-col {
     text-align: center!important;
     width: 100%;
     padding: 5px;
   }
+}
+main p {
+  line-height: 1.4;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-indent: 2.5em;
+}
+main p + p {
+  text-indent: 0;
+}
+main .content {
+  margin-bottom: 40px;
+}
+main .content h2 {
+  margin: 20px 0;
+}
+main .page-image {
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+}
+main .gallery-images {
+  margin-bottom: 40px;
+}
+main .gallery-images img {
+  margin: 5px;
+  display: inline-block;
+}
+.calculator h2 {
+  margin: 20px 0;
+}
+.item {
+  width: 24%;
+}
+.item.w2 {
+  width: 49%;
+}
+.grid-sizer {
+  width: 24%;
+}
+.gutter-sizer {
+  width: 1%;
 }

@@ -1,19 +1,113 @@
 extends ./layouts/default.jade
 
+block styles
+
+block scripts
+	script(src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.2.2/masonry.pkgd.min.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
+	script.
+		var $container = $('.gallery-images');
+		// initialize
+		$container.imagesLoaded( function() {
+		  $container.masonry({
+					columnWidth: ".grid-sizer",
+					gutter: ".gutter-sizer",
+					itemSelector: '.item'
+				});
+		});
+
+
+
 block title
 	title Inner Page
 
 block content
-	.container-fluid
-		.row
-			.col-md-7
-				h1 Визитки
-				p
-					|Мы можем предложить Вам изготовление визитных карточек различными видами печати - цифровой лазерной (с ламинацией и без), объемным шелкотрафаретом, тиснением фольгой. Каждый вид печати имеет свои плюсы и минусы. Мы постараемся дать краткое описание каждого вида печати. Конечно, в текстовом описании всего не расскажешь, лучше всего подъехать к нам в офис и все посмотреть и "пощупать" вживую, но для первичного дистанционного ознакомления этого достаточно.
-					|Акция! 100 полноцветных визитных карточек на картоне 300 г/м 40 гривен односторонние, 80 гривен двусторонние!*
-					|*При условии предоставления заказчиком готового к печати макета с соблюдением стандартных полиграфических требований и сроке изготовления не менее 24-х часов
-					|Акция! Фигурные визитные карточки! Любая форма! Никаких ограничений Вашей фантазии!
-					|до 1-го сентября 2011 года фигурная вырезка визитных карточек всего за 100 гривен за комплект*
-					|*Подразумевается прибавление к стоимости комплекта из 100 штук при выбранном Вами картоне и виде печати ста гривен
-			.col-md-5
+	main
+		.container-fluid
+			.row
+				.col-md-8
+					.content
+						h2 Визитки
+						p
+							|Каждый вид печати имеет свои плюсы и минусы. Мы постараемся дать краткое описание каждого вида печати. Конечно, в текстовом описании всего не расскажешь, лучше всего подъехать к нам в офис и все посмотреть и "пощупать" вживую, но для первичного дистанционного ознакомления этого достаточно.
+						p
+							|Мы можем предложить Вам изготовление визитных карточек различными видами печати - цифровой лазерной (с ламинацией и без), объемным шелкотрафаретом, тиснением фольгой.
+
+							.embed-responsive.embed-responsive-16by9
+								iframe.embed-responsive-item(src="https://www.youtube.com/embed/NTCLob_-Eak?theme=light" frameborder="0" allowfullscreen)
+						p
+							| Плюсы и минусы лазерной печати:
+						p
+							| Плюсы:
+							ul
+								li короткий срок изготовления (от 1 часа)
+								li сравнительно невысокая цена
+								li цена не зависит от количества цветов
+								li цена не зависит от заполнения цветом - любые плашки, фото - в общем, никаких ограничений по макету
+								li не боится воды, ультрафиолета и царапин
+								li допускает ламинацию
+								li печатает на ЛЮБЫХ светлых дизайнерских картонах до 420 г/м (НОВИНКА!!!! Новая цифровая печатная машина - анонс на главной странице сайта!)
+						p
+							| Минусы:
+							ul
+								li невозможно печатать по темным дизайнерским картонам и пластикам.
+					h2 Образцы работ
+					.gallery-images
+						.grid-sizer
+						.gutter-sizer
+						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						.item.w2: img.img-responsive(src="https://placekitten.com/500/387")
+						.item: img.img-responsive(src="https://placekitten.com/250/365")
+						.item: img.img-responsive(src="https://placekitten.com/250/512")
+						.item: img.img-responsive(src="https://placekitten.com/250/515")
+						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						.item: img.img-responsive(src="https://placekitten.com/250/315")
+						
+				.col-md-4
+					.calculator
+						h2 Расчет стоимости
+						.row
+							.col-md-6
+								.form-group
+									label Размер
+									select.form-control
+										option 90x50
+										option 85x55
+								.form-group
+									label Бумага
+									select.form-control
+										option 300 гм/м2 Мелованная 
+										option DNS 300
+								.form-group
+									label Ламинация
+									select.form-control
+										option Без ламинации 
+										option Глянцевая ламинация 80мк
+										option Матовая припресовка 20мк
+							.col-md-6
+								.form-group
+									label Тираж
+									select.form-control
+										option 100 
+										option 200
+										option 2000
+								.form-group
+										label Цветность
+										select.form-control
+											option Односторонняя (4+0)
+											option Двухсторонняя (4+4)
+								.form-group
+										label Скргуление уголков
+										select.form-control
+											option Без скругления
+											option Скругление
+											option Высечка
+											option Контурная вырезка
+							.col-md-12
+								.form-group
+									h2
+											| Стоимость 250 &#8372;
+
 
