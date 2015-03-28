@@ -10,19 +10,17 @@ block scripts
 	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js")
 	script(src="/assets/js/photoswipe/photoswipe.min.js")
 	script(src="/assets/js/photoswipe/photoswipe-ui-default.min.js")
+	script(src="/assets/js/photoswipe/photoswipe-init.js")
 	script.
 		var $container = $('.gallery-images');
 		// initialize
 		$container.imagesLoaded( function() {
-		  $container.masonry({
-					columnWidth: ".grid-sizer",
-					gutter: ".gutter-sizer",
-					itemSelector: '.item'
-				});
+			$container.masonry({
+				columnWidth: ".grid-sizer",
+				gutter: ".gutter-sizer",
+				itemSelector: '.item'
+			});
 		});
-
-
-
 block title
 	title Inner Page
 
@@ -31,9 +29,10 @@ block content
 		.container-fluid
 			.row
 				.col-md-8
-					.content
-						.col-lg-6.col-md-12
+					.col-md-12
+						section
 							h2 Визитки
+							img.heading-image(src="./assets/images/products-grid/vizitki.jpg" class="img-responsive")
 							p Каждый вид печати имеет свои плюсы и минусы. Мы постараемся дать краткое описание каждого вида печати. Конечно, в текстовом описании всего не расскажешь, лучше всего подъехать к нам в офис и все посмотреть и "пощупать" вживую, но для первичного дистанционного ознакомления этого достаточно.
 							p Мы можем предложить Вам изготовление визитных карточек различными видами печати - цифровой лазерной (с ламинацией и без), объемным шелкотрафаретом, тиснением фольгой.
 							p Плюсы и минусы лазерной печати:
@@ -49,26 +48,41 @@ block content
 							p: b Минусы:
 							ul.minus
 								li невозможно печатать по темным дизайнерским картонам и пластикам.
-						.col-lg-6.col-md-12
+						section
+							h2 Примеры работ
+							.gallery-images
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind1.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind1.jpg")
+									figcaption.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								figure.item.w2
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind2.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind2.jpg")
+									figcaption.hidden Vero dignissimos, ipsa nobis itaque quae aut officia.
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind3.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind3.jpg")
+									figcaption.hidden Ad ipsum nemo assumenda a consequatur quo fuga inventore tempora quis ipsam! Nulla, maiores!
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind4.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind4.jpg")
+									figcaption.hidden Buisness card #1
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind5.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind5.jpg")
+									figcaption.hidden Buisness card #1
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind6.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind6.jpg")
+									figcaption.hidden Buisness card #1
+								figure.item
+									a(data-size="1200x800" href="/assets/images/buisness-cards/Bind7.jpg"): img.img-responsive(alt="Buisness card #1" src="/assets/images/buisness-cards/Bind7.jpg")
+									figcaption.hidden Buisness card #1
+								.grid-sizer
+								.gutter-sizer
+						section
+							h2 Видео
 							.page-video
 								.embed-responsive.embed-responsive-16by9
 									iframe.embed-responsive-item(src="https://www.youtube.com/embed/DsC_Q9Htue4?theme=light" frameborder="0" allowfullscreen)
-								h4 Тиснение фольгиратором
-						.col-md-12			
-							h2 Примеры работ
-							.gallery-images
-								.grid-sizer
-								.gutter-sizer
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind1.jpg")
-								.item.w2: img.img-responsive(src="/assets/images/buisness-cards/Bind2.jpg")
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind3.jpg")
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind4.jpg")
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind5.jpg")
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind6.jpg")
-								.item: img.img-responsive(src="/assets/images/buisness-cards/Bind7.jpg")
-						
+								.embed-responsive.embed-responsive-16by9
+									iframe.embed-responsive-item(src="https://www.youtube.com/embed/DsC_Q9Htue4?theme=light" frameborder="0" allowfullscreen)
 				.col-md-4
-					.calculator
+					section
 						h2 Калькулятор
 						.row
 							.col-md-6
@@ -80,7 +94,7 @@ block content
 								.form-group
 									label Бумага
 									select.form-control
-										option 300 гм/м2 Мелованная 
+										option 300 гм/м2 Мелованная
 										option DNS 300
 								.form-group
 									label Ламинация
@@ -108,7 +122,23 @@ block content
 											option Высечка
 											option Контурная вырезка
 							.col-md-12
+								h3.text-right Стоимость: 250 &#8372;
+					section
+						h2 Акции
+						p 10.02.2015 100 полноцветных визитных карточек на картоне 300 г/м 40 гривен односторонние, 80 гривен двусторонние!*
+						p 12.02.2015 Фигурные визитные карточки! Любая форма! Никаких ограничений Вашей фантазии! до 1-го сентября 2011 года фигурная вырезка визитных карточек всего за 100 гривен за комплект*
+					section
+						h2 Отправить нам сообщение
+						.row
+							.col-md-6
 								.form-group
-									h2 Стоимость 250 &#8372;
+									input.form-control(placeholder="Имя")
+							.col-md-6
+								.form-group
+									input.form-control(placeholder="Телефон")
+							.col-md-12
+								.form-group
+									textarea.form-control(placeholder="Сообщение" rows="5")
+								button.btn.btn-primary Отправить сообщение
 
-
+	include ./includes/photoswipe.jade

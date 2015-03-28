@@ -63,8 +63,6 @@ gulp.task('js', function() {
 		paths.assets.vendor + 'jquery/dist/jquery.js',
 		paths.assets.vendor + 'bootstrap/dist/js/bootstrap.min.js',
 		paths.assets.vendor + 'sequence/scripts/jquery.sequence.js',
-		paths.assets.vendor + 'photoswipe/dist/photoswipe.min.js',
-		paths.assets.vendor + 'photoswipe/dist/photoswipe-ui-default.min.js',
 		paths.src.js + 'scripts.js'
 	])
 	//.pipe(concat('scripts.js'))
@@ -76,6 +74,7 @@ gulp.task('js', function() {
 	gulp.src([
 		paths.assets.vendor + 'photoswipe/dist/photoswipe.min.js',
 		paths.assets.vendor + 'photoswipe/dist/photoswipe-ui-default.min.js',
+		paths.src.js + 'photoswipe-init.js'
 	])
 	.pipe(gulp.dest(paths.assets.js + 'photoswipe/'))
 

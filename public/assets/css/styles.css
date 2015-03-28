@@ -371,33 +371,41 @@ footer .right-col {
     padding: 5px;
   }
 }
+main h2 {
+  color: #A60D0D;
+  font-size: 26px;
+  margin: 20px 0;
+}
 main p {
   line-height: 1.4;
   font-size: 16px;
   margin-bottom: 10px;
 }
-main .content {
-  margin-bottom: 40px;
+main section {
+  margin-bottom: 30px;
 }
-main .content h2 {
-  margin: 20px 0;
+main .heading-image {
+  float: right;
+  margin-left: 20px;
+  border-radius: 5px;
 }
-main .content ul.plus,
-main .content ul.minus {
+main ul.plus,
+main ul.minus {
+  font-size: 16px;
   padding: 0;
   list-style-type: none;
 }
-main .content ul.plus li:before,
-main .content ul.minus li:before {
+main ul.plus li:before,
+main ul.minus li:before {
   font-size: 15px;
   font-weight: bold;
   padding: 0 10px;
 }
-main .content ul.plus li:before {
+main ul.plus li:before {
   content: '+';
   color: green;
 }
-main .content ul.minus li:before {
+main ul.minus li:before {
   content: '-';
   color: red;
 }
@@ -405,15 +413,9 @@ main .page-video {
   position: relative;
   bottom: 0;
 }
-@media (min-width: 1400px) {
-  main .page-video {
-    width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  main .page-video {
-    margin-top: 80px;
-  }
+main .page-video .embed-responsive {
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 main .gallery-images {
   margin-bottom: 40px;
@@ -421,9 +423,7 @@ main .gallery-images {
 main .gallery-images img {
   margin-bottom: 5px;
   display: inline-block;
-}
-.calculator h2 {
-  margin: 20px 0;
+  border-radius: 5px;
 }
 .item {
   width: 19.5%;
