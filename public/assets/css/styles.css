@@ -83,46 +83,6 @@ header ul {
   transform: translateY(-50%);
   position: absolute;
 }
-header .header-nav {
-  height: 170px;
-}
-header .header-nav li {
-  display: inline-block;
-  position: relative;
-  bottom: 0;
-}
-header .header-nav a {
-  display: inline-block;
-  background: #444;
-  color: #ddd;
-  padding: 6px 8px;
-  margin: 2px;
-  font-size: 14px;
-  text-decoration: none;
-  white-space: pre;
-}
-@media only screen and (max-width: 1024px) {
-  header .header-nav a {
-    font-size: 13px;
-    padding: 5px 7px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .header-nav a {
-    font-size: 12px;
-    padding: 4px 6px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  header .header-nav a {
-    font-size: 11px;
-    padding: 3px 5px;
-  }
-}
-header .header-nav a:hover {
-  background: #555;
-  color: #fafafa;
-}
 header .address {
   font-size: 17px;
   color: #fafafa;
@@ -131,6 +91,13 @@ header .address {
 }
 header .address li {
   white-space: pre;
+}
+header .address a {
+  color: #A6CE39;
+  text-decoration: none;
+}
+header .address a:hover {
+  color: #BAEE2F;
 }
 @media only screen and (max-width: 1024px) {
   header .address {
@@ -173,6 +140,7 @@ nav .nav-inner a {
   text-decoration: none;
   font-size: 16px;
   line-height: 40px;
+  display: block;
 }
 @media screen and (max-width: 1024px) {
   nav .nav-inner a {
@@ -342,6 +310,13 @@ footer {
   color: #999;
   padding: 20px 0 20px;
   text-align: left;
+}
+footer a {
+  color: #A6CE39;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #BAEE2F;
 }
 footer h1 {
   color: #ccc;

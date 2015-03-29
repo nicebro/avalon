@@ -27,40 +27,6 @@ header {
 		transform: translateY(-50%);
 		position: absolute;
 	}
-	.header-nav {
-		height: @header-height;
-		li {
-			display: inline-block;
-			position: relative;
-			bottom: 0;
-		}
-		a {
-			display: inline-block;
-			background: #444;
-			color: #ddd;
-			padding: 6px 8px;
-			margin: 2px;
-			font-size: 14px;
-			text-decoration: none;
-			white-space: pre;
-			@media only screen and (max-width : 1024px) {
-				font-size: 13px;
-				padding: 5px 7px;
-			}
-			@media only screen and (max-width : 768px) {
-				font-size: 12px;
-				padding: 4px 6px;
-			}
-			@media only screen and (max-width : 480px) {
-				font-size: 11px;
-				padding: 3px 5px;
-			}
-			&:hover {
-				background: #555;
-				color: #fafafa;
-			}
-		}
-	}
 	.address {
 		font-size: 17px;
 		color:#fafafa;
@@ -68,6 +34,13 @@ header {
 		height: @header-height;
 		li {
 			white-space: pre;
+		}
+		a {
+			color: #A6CE39;
+			text-decoration: none;
+			&:hover {
+				color: #BAEE2F;
+			}
 		}
 		@media only screen and (max-width : 1024px) {
 			font-size: 16px;

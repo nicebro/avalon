@@ -63,7 +63,7 @@ gulp.task('js', function() {
 		paths.assets.vendor + 'jquery/dist/jquery.js',
 		paths.assets.vendor + 'bootstrap/dist/js/bootstrap.min.js',
 		paths.assets.vendor + 'sequence/scripts/jquery.sequence.js',
-		paths.src.js + 'scripts.js'
+		paths.src.js + '*.js'
 	])
 	//.pipe(concat('scripts.js'))
 	.pipe(gulp.dest(paths.assets.js))
