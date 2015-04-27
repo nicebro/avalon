@@ -2,7 +2,7 @@
 @header-height: 170px;
 header {
 	height: @header-height;
-	background: #36312e;
+	background:#36312e;
 	position: relative;
 	.logo {
 		position: relative;
@@ -16,25 +16,62 @@ header {
 			}
 		}
 	}
+	.phones {
+		margin-top: 0.5em;
+		line-height: 2.1em;
+		ul {
+			text-align: right;
+			@media only screen and (max-width : 768px) {
+				width: auto;
+				margin: none;
+				overflow: visible;
+				line-height: 1.5em;
+			}
+
+			li {
+				position: relative;
+			}
+		}
+
+		.city-phone ~ span {
+			position: absolute;
+ 			left: -65px;
+ 			@media only screen and (max-width : 480px) {
+				font-size: 1em;
+			}
+		}
+
+		.life,.mts,.kievstar,.city-phone {
+			// margin-left: 50px;
+			&:before {
+				content: '';
+				width: 50px;
+				height: 30px;
+				position: absolute;
+				right: 135px;
+			}
+		}
+		.life:before {
+			background: url('../images/operators.png') 0 -90px no-repeat;
+		}		
+		.mts:before {
+			background: url('../images/operators.png') 0 -30px no-repeat;
+		}		
+		.kievstar:before {
+			width: 30px;
+			background: url('../images/operators.png') -10px -60px no-repeat;
+		}		
+		.city-phone:before {
+			width: 30px;
+			background: url('../images/operators.png') -10px 0 no-repeat;
+		}
+	}
 	ul {
 		list-style:none;
 		padding: 0;
 		margin: 0;
-		right: 20px;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		position: absolute;
-	}
-	.address {
-		font-size: 17px;
-		color:#fafafa;
-		text-align: right;
-		height: @header-height;
-		li {
-			white-space: pre;
-		}
+		font-size: 18px;
+		color: #fafafa;
 		a {
 			color: #A6CE39;
 			text-decoration: none;
@@ -42,16 +79,14 @@ header {
 				color: #BAEE2F;
 			}
 		}
-		@media only screen and (max-width : 1024px) {
-			font-size: 16px;
-		}
-		@media only screen and (max-width : 768px) {
-			font-size: 15px;
-		}
-		@media only screen and (max-width : 480px) {
-			font-size: 14px;
-		}
 	}
+
+	.address {
+		line-height: 2.5em;
+		margin-top: 1em;
+		text-align: right;
+	}
+
 	&:after {
 		background: url(../images/stripes.jpg);
 		content: '';
@@ -61,4 +96,5 @@ header {
 		left: 0;
 		right: 0;
 	}
+
 }

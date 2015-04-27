@@ -1,16 +1,26 @@
 header
 	.container-fluid
 		.row
-			.col-md-3.col-xs-6
-				.logo: a(href="/"): img(src="/assets/images/logo.png" alt="Logo")
-			.col-md-6.col-md-offset-3.col-xs-6
-				.address: ul
-					li Украина, Киев
-					li ул. Ивана Кудри 41/22
+			.col-md-2.col-xs-6.col-sm-2
+				.logo: a(href="/"): img(src="/assets/images/logo.png" alt="Logo")			
+			.col-md-3.col-md-offset-1.col-xs-6.col-sm-6
+				.phones: ul
 					li
-						span.small тел.: 
-						a(href="tel:80445030660")|(044) 503-06-60
-					li: span.small (многоканальный)
+						span.small (8 линий многоканальный) 
+					li
+						a.city-phone(href="tel:+380445030660") (044) 503-06-60
+						
+					li 
+						a.mts(href="tel:+380508148333") (050) 814-83-33
+					li 
+						a.life(href="tel:+380930001864") (093) 000-18-64
+					li 
+						a.kievstar(href="tel:+380672143403") (067) 214-34-03
+			.col-md-5.col-md-offset-1.col-xs-4.col-sm-4.hidden-xs
+				.address: ul
+					li Украина, 01042, Киев
+					li ул. Ивана Кудри, 41/22
+					li: a(href="/contacts") (схема проезда)
 					li
 						span.small e-mail: 
 						a(href="mailto:print@avalon-print.com") print@avalon-print.com

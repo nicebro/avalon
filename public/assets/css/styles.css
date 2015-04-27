@@ -5,6 +5,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 100px;
+  font-family: 'PT Sans', sans-serif;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -55,6 +56,9 @@ body {
   padding-right: 10px;
   padding-left: 10px;
 }
+.gallery-images .item {
+  float: left;
+}
 header {
   height: 170px;
   background: #36312e;
@@ -72,47 +76,75 @@ header .logo {
     height: auto;
   }
 }
+header .phones {
+  margin-top: 0.5em;
+  line-height: 2.1em;
+}
+header .phones ul {
+  text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  header .phones ul {
+    width: auto;
+    margin: none;
+    overflow: visible;
+    line-height: 1.5em;
+  }
+}
+header .phones ul li {
+  position: relative;
+}
+header .phones .city-phone ~ span {
+  position: absolute;
+  left: -65px;
+}
+@media only screen and (max-width: 480px) {
+  header .phones .city-phone ~ span {
+    font-size: 1em;
+  }
+}
+header .phones .life:before,
+header .phones .mts:before,
+header .phones .kievstar:before,
+header .phones .city-phone:before {
+  content: '';
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  right: 135px;
+}
+header .phones .life:before {
+  background: url('../images/operators.png') 0 -90px no-repeat;
+}
+header .phones .mts:before {
+  background: url('../images/operators.png') 0 -30px no-repeat;
+}
+header .phones .kievstar:before {
+  width: 30px;
+  background: url('../images/operators.png') -10px -60px no-repeat;
+}
+header .phones .city-phone:before {
+  width: 30px;
+  background: url('../images/operators.png') -10px 0 no-repeat;
+}
 header ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  right: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  position: absolute;
-}
-header .address {
-  font-size: 17px;
+  font-size: 18px;
   color: #fafafa;
-  text-align: right;
-  height: 170px;
 }
-header .address li {
-  white-space: pre;
-}
-header .address a {
+header ul a {
   color: #A6CE39;
   text-decoration: none;
 }
-header .address a:hover {
+header ul a:hover {
   color: #BAEE2F;
 }
-@media only screen and (max-width: 1024px) {
-  header .address {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .address {
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  header .address {
-    font-size: 14px;
-  }
+header .address {
+  line-height: 2.5em;
+  margin-top: 1em;
+  text-align: right;
 }
 header:after {
   background: url(../images/stripes.jpg);
